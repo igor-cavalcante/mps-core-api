@@ -6,6 +6,10 @@ const UserSchema = require('../Models/UserSchema.js');
 const router = express.Router(); 
 
 
+router.get("/",(req,res)=>{
+  res.status(200).json({message:"seja bem vindo a nossa api"});
+})
+
 router.post('/login', async (req,res)=> {
     try {
       console.log(req.body);
